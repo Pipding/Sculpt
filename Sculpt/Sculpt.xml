@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sculpt</name>
+    </assembly>
+    <members>
+        <member name="T:Sculpt.Controllers.JiraController">
+            <summary>
+            Provides API calls to functionality relating to Halts
+            </summary>
+        </member>
+        <member name="M:Sculpt.Controllers.JiraController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            API controller for interacting with JIRA
+            </summary>
+        </member>
+        <member name="M:Sculpt.Controllers.JiraController.Get(System.String)">
+            <summary>
+            Gets information about a case from Jira
+            </summary>
+            <param name="imc">IMC number of the case</param>
+            <returns>Basic information about a Jira case</returns>
+        </member>
+        <member name="T:Sculpt.Controllers.QueueController">
+            <summary>
+            Provides API calls to functionality relating to Halts
+            </summary>
+        </member>
+        <member name="M:Sculpt.Controllers.QueueController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            API controller for interacting with Amazon SQS
+            </summary>
+        </member>
+        <member name="M:Sculpt.Controllers.QueueController.Get">
+            <summary>
+            Gets the oldest 5 entries from the SQS queue
+            </summary>
+            <returns>IEnumerable of strings containing the bodies of SQS messages</returns>
+        </member>
+        <member name="T:Sculpt.Controllers.SlackController">
+            <summary>
+            Provides API calls to functionality relating to Halts
+            </summary>
+        </member>
+        <member name="M:Sculpt.Controllers.SlackController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            API controller for interacting with Slack
+            </summary>
+        </member>
+        <member name="M:Sculpt.Controllers.SlackController.Post(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Post a message in one or more slack channels
+            </summary>
+            <param name="message">Message to be posted</param>
+            <param name="channels">Channels to post in</param>
+            <returns>HTTP 200 if message is posted successfully. HTTP 500 if there's a problem</returns>
+        </member>
+        <member name="T:Sculpt.Startup">
+            <summary>
+            Sets up base functionality of the application
+            </summary>
+        </member>
+        <member name="P:Sculpt.Startup.Configuration">
+            <summary>
+            App configuration
+            </summary>
+        </member>
+        <member name="M:Sculpt.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Function which runs on app start
+            </summary>
+            <param name="configuration">Application config</param>
+        </member>
+        <member name="M:Sculpt.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container
+            </summary>
+            <param name="services">Application services</param>
+        </member>
+        <member name="M:Sculpt.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline
+            </summary>
+            <param name="app">Application builder</param>
+        </member>
+    </members>
+</doc>

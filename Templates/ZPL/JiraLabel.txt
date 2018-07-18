@@ -1,0 +1,12 @@
+﻿﻿^XA
+^FO15,25^A0N,40,30^FDType:{IssueType}^FS
+^FO200,25^A0N,40,30^FD{Key}^FS
+^FO400,25^A0N,40,30^FD{Assignee}^FS
+^FO650,25^A0N,40,30^FD{Status}^FS
+^FO15,150^A0N,50,40^FD{Summary1}^FS
+^FO15,250^A0N,50,40^FD{Summary2}^FS
+^FO15,350^A0N,40,30^FDClarity Project: {Project}^FS
+^FO15,450^A0N,40,30^FDLinked Issues: ^FS
+^FO15,500^A0N,30,20^FD{LinkedIssue}^FS
+^FO600,500^A0N,30,20^FD{Estimate}^FS
+^XZ

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sculpt", "Sculpt\Sculpt.csproj", "{C9E121B0-E455-4DE0-85C1-2CC5F24F7BCB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC178AA5-7419-4FE2-BAE6-5C6B54AA37FB} = {AC178AA5-7419-4FE2-BAE6-5C6B54AA37FB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{541D96E9-155C-4A68-9B2F-52CCD1868EC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "Templates\Templates.csproj", "{4E1589E0-5FA2-485F-8B8F-9229DBEDE291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slack", "Slack\Slack.csproj", "{AC178AA5-7419-4FE2-BAE6-5C6B54AA37FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jira", "Jira\Jira.csproj", "{D3522DAC-F621-4FCE-AA73-4006842F21AF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{541D96E9-155C-4A68-9B2F-52CCD1868EC7} = {541D96E9-155C-4A68-9B2F-52CCD1868EC7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQS", "SQS\SQS.csproj", "{492FB9C2-312E-4519-9ADA-34CD7019899D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9E121B0-E455-4DE0-85C1-2CC5F24F7BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E121B0-E455-4DE0-85C1-2CC5F24F7BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E121B0-E455-4DE0-85C1-2CC5F24F7BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E121B0-E455-4DE0-85C1-2CC5F24F7BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{541D96E9-155C-4A68-9B2F-52CCD1868EC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{541D96E9-155C-4A68-9B2F-52CCD1868EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{541D96E9-155C-4A68-9B2F-52CCD1868EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{541D96E9-155C-4A68-9B2F-52CCD1868EC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1589E0-5FA2-485F-8B8F-9229DBEDE291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1589E0-5FA2-485F-8B8F-9229DBEDE291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1589E0-5FA2-485F-8B8F-9229DBEDE291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1589E0-5FA2-485F-8B8F-9229DBEDE291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC178AA5-7419-4FE2-BAE6-5C6B54AA37FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC178AA5-7419-4FE2-BAE6-5C6B54AA37FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC178AA5-7419-4FE2-BAE6-5C6B54AA37FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC178AA5-7419-4FE2-BAE6-5C6B54AA37FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3522DAC-F621-4FCE-AA73-4006842F21AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3522DAC-F621-4FCE-AA73-4006842F21AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3522DAC-F621-4FCE-AA73-4006842F21AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3522DAC-F621-4FCE-AA73-4006842F21AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492FB9C2-312E-4519-9ADA-34CD7019899D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492FB9C2-312E-4519-9ADA-34CD7019899D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492FB9C2-312E-4519-9ADA-34CD7019899D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492FB9C2-312E-4519-9ADA-34CD7019899D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB512C3A-7AD0-4820-8C29-43317761457C}
+	EndGlobalSection
+EndGlobal
