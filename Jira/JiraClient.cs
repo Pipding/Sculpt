@@ -34,16 +34,10 @@ namespace Jira
             return retVal;
         }
 
-        #region Potentially useful
-        /*public Sprint GetIssueList(string project)
-        {
-            var request = new RestRequest("rest/api/2/search?jql=sprint+in+(openSprints())+AND+project+in+(IMC)+AND+issuetype+in+(Bug,+Epic,+Story)", Method.GET);
-            //request.AddUrlSegment("id", "11107");
-            var response = client.Execute(request);
-            var content = response.Content;
-            var outObject = JsonConvert.DeserializeObject<Sprint>(content.ToString());
-            return outObject;
-        }*/
+        #region Jira API
+        /*
+            ("rest/api/2/search?jql=sprint+in+(openSprints())+AND+project+in+(IMC)+AND+issuetype+in+(Bug,+Epic,+Story)", Method.GET);
+        */
         #endregion
 
         private static HttpClient CreateHttpClientWithAuthorization(string authType, string authKey)
