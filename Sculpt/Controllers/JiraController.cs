@@ -28,16 +28,16 @@ namespace Sculpt.Controllers
         /// <summary>
         /// Gets information about a case from Jira
         /// </summary>
-        /// <param name="imc">IMC number of the case</param>
+        /// <param name="key">Jira key of the case</param>
         /// <returns>Basic information about a Jira case</returns>
         [HttpGet]
-        public ActionResult<JiraIssue> Get(string imc)
+        public ActionResult<JiraIssue> Get(string key)
         {
             try
             {
-                var imcKey = JiraClient.AppendPrefixIfMissing(_configuration["Jira:KeyPrefix"], imc);
+                var jiraKey = JiraClient.AppendPrefixIfMissing(_configuration["Jira:KeyPrefix"], key);
 
-                var url = _configuration["Jira:URL"] + imcKey + _configuration["Jira:Fields"];
+                var url = _configuration["Jira:URL"] + jiraKey + _configuration["Jira:Fields"];
 
                 var authKey = _configuration["Jira:AuthenticationKey"];
 
