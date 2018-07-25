@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Sculpt": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Hosting:Environment": "Development"
+      }
+    }
+  }
+}

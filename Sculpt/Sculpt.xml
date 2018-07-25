@@ -65,11 +65,12 @@
             App configuration
             </summary>
         </member>
-        <member name="M:Sculpt.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:Sculpt.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
             <summary>
             Function which runs on app start
             </summary>
             <param name="configuration">Application config</param>
+            <param name="environment">Hosting environment of the application</param>
         </member>
         <member name="M:Sculpt.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>

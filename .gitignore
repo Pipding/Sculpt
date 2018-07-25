@@ -18,3 +18,4 @@
 /.vs/Sculpt/v15/Server/sqlite3/storage.ide-shm
 /.vs/Sculpt/v15/Server/sqlite3/storage.ide-wal
 /.vs/config/applicationhost.config
+/Sculpt/appsettings.Development.json

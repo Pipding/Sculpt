@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Sculpt
 {
@@ -22,9 +23,16 @@ namespace Sculpt
         /// Function which runs on app start
         /// </summary>
         /// <param name="configuration">Application config</param>
-        public Startup(IConfiguration configuration)
+        /// <param name="environment">Hosting environment of the application</param>
+        public Startup(IConfiguration configuration, IHostingEnvironment environment)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{environment.EnvironmentName}.json", optional: true)
+            .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
         }
 
 
