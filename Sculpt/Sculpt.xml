@@ -18,7 +18,7 @@
             <summary>
             Gets information about a case from Jira
             </summary>
-            <param name="imc">IMC number of the case</param>
+            <param name="key">Jira key of the case</param>
             <returns>Basic information about a Jira case</returns>
         </member>
         <member name="T:Sculpt.Controllers.QueueController">
