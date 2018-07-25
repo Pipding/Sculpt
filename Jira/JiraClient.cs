@@ -20,18 +20,14 @@ namespace Jira
         /// <summary>
         /// Validates user input to ensure the "IMC-" prefix is present
         /// </summary>
-        /// <param name="imc">Jira issue key provided by the user</param>
+        /// <param name="keyNumber">Jira issue key provided by the user</param>
         /// <returns>Valid IMC Jira key</returns>
-        public static string AppendPrefixIfMissing(string imc)
+        public static string AppendPrefixIfMissing(string prefix, string keyNumber)
         {
-            var retVal = "IMC-";
+            var startingIndexOfNumber = keyNumber.IndexOfAny("0123456789".ToCharArray());
+            var number = keyNumber.Substring(startingIndexOfNumber, keyNumber.Length - startingIndexOfNumber);
 
-            var startingIndexOfNumber = imc.IndexOfAny("0123456789".ToCharArray());
-            var number = imc.Substring(startingIndexOfNumber, imc.Length - startingIndexOfNumber);
-
-            retVal += number;
-
-            return retVal;
+            return prefix + number;
         }
 
         #region Jira API

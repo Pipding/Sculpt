@@ -35,7 +35,7 @@ namespace Sculpt.Controllers
         {
             try
             {
-                var imcKey = JiraClient.AppendPrefixIfMissing(imc);
+                var imcKey = JiraClient.AppendPrefixIfMissing(_configuration["Jira:KeyPrefix"], imc);
 
                 var url = _configuration["Jira:URL"] + imcKey + _configuration["Jira:Fields"];
 
